@@ -1,0 +1,668 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/1AngieF/PROGCOM-B/blob/main/LISTAS%2C_DUPLAS_Y_DICCIONARIOS_(1)ANGIE\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#SECUENCIA DE DATOS\n"
+      ],
+      "metadata": {
+        "id": "SHcbrJhhNGOk"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##LISTAS\n",
+        "También conocidas como vectores o arrays.\n",
+        "Es una variable que, en lugar de contener un valor, contiene una secuencia ordenada de estos, a los que se puede acceder por su posición o por su índice.\n",
+        "Se declaran indicando sus elementos, separados por comas, entre corchetes []"
+      ],
+      "metadata": {
+        "id": "325LVBzsM0x7"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 27,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "23GjaB68MkIG",
+        "outputId": "4ba6d435-dffa-4f67-8446-a4769765a5ab"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['primero', 'segundo', 'tercero', 'cuarto']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 27
+        }
+      ],
+      "source": [
+        "lista=[\"primero\",\"segundo\", \"tercero\", \"cuarto\"]\n",
+        "lista"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###Accediendo a los elementos de la lista"
+      ],
+      "metadata": {
+        "id": "yPn3XFg4PWpt"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Accediendo a la lista por posición\n",
+        "lista[0]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "-63XOgdXOzdR",
+        "outputId": "e6ac86c3-8854-4238-a6b1-e5f6f0447557"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'primero'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Accediendo a todos los elementos de la lista empleando el slicing\n",
+        "lista[:]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cadWYF2xSW8L",
+        "outputId": "489acbb9-7023-47d9-ffe5-17bb25f0832d"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['primero', 'segundo', 'tercero', 'cuarto']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Accediendo a los dos primeros elementos de la lista\n",
+        "lista[0:2]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XsDQpQKISYiL",
+        "outputId": "77979c5a-dabf-4ff7-e302-4f4901762c23"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['primero', 'segundo']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Existe alguna otra manera de imprimir los dos primeros elementos de la lista? Coloque la línea de código que hace esto.\n",
+        "num = \"primero\",\"segundo\"\n",
+        "lista=[num] \n",
+        "lista"
+      ],
+      "metadata": {
+        "id": "miawsux8S7BD",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "6859ce33-610b-4c39-b8ad-6db4169b9ab2"
+      },
+      "execution_count": 35,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[('primero', 'segundo')]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 35
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Accediendo a los dos últimos elementos de la lista\n",
+        "lista[2:4]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RNcXanPzTB7u",
+        "outputId": "f894c8a0-8031-4011-fd1c-ccdf12ca19e7"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['tercero', 'cuarto']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Qué pasará cuando se usa un índice negativo? Ejemplo: lista[-4], lista[-3]\n",
+        "##RTA:podemos pedirle al programa que lea el número de index de forma inversa añadiendo un signo «-» antes del número. Así, -1 se refiere al último elemento, -2 al penúltimo, etc.\n",
+        "listas_colores =[\"violeta\", \"celeste\", \"morado\", \"amarrillo\" \"magenta\" ] \n",
+        "print(listas_colores[-3])"
+      ],
+      "metadata": {
+        "id": "_0cx4i7CVF_6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "fbeaeadc-af83-49c3-f655-892355a843c1"
+      },
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "celeste\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Existe otra forma para acceder a los dos últimos elementos de la lista?. Coloque la línea de código que hace esto.\n",
+        "#index   0         1          2          3 \n",
+        "lista=[\"primero\",\"segundo\", \"tercero\", \"cuarto\"]\n",
+        "lista[-2:4] \n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "Eg2ZIr5DTnFJ",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "9d81121a-b169-4b81-fced-23b70f73c21c"
+      },
+      "execution_count": 65,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['tercero', 'cuarto']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 65
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Cómo podría saberse la posición de la lista que ocupa un elemento? \n",
+        "#Escriba el código que permita ingresar un elemento de la lista, e imprima la posición del elemento de la lista\n",
+        "\n",
+        "miLista = [21, 5, 8, 52, 21, 87]\n",
+        "elemento = 8\n",
+        " \n",
+        "#search for the item\n",
+        "indice = miLista.index(elemento)\n",
+        " \n",
+        "print('La posición del ', elemento, ' en la lista es:', indice)\n"
+      ],
+      "metadata": {
+        "id": "AFYUJpJCQG9p",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "24b72a4f-0024-413d-d613-28bc21165f7f"
+      },
+      "execution_count": 67,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "La posición del  8  en la lista es: 2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###Operaciones con las listas"
+      ],
+      "metadata": {
+        "id": "OPiv0fe4R8__"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Crear una lista vacía  \n",
+        "ejemplo=[] \n"
+      ],
+      "metadata": {
+        "id": "sgr461D-SAqe"
+      },
+      "execution_count": 58,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "alumnos=[]\n",
+        "alumnos"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nKCFHXlgh_Ud",
+        "outputId": "f881c099-81ea-406c-a1c9-900e6c57e5e4"
+      },
+      "execution_count": 60,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 60
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Cómo se podría crear una matriz? Ingrese el código que permita generar una matriz 3x2, siendo la primera fila \"Nombre\", \"Peso\", \"Altura\"\n",
+        "#y diligencie la segunda fila con números\n",
+        "#Llame a esa matriz calculo_IMC\n",
+        "#Debe imprimir \n",
+        "#Nombre  Peso[kg] Altura[m]\n",
+        "#\"Sofía\"    57      1.65 \n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "NnNEsFRbaUul"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Genere una cuarta columna para la matriz IMC, que tenga como nombre IMC y calcule el índice de masa corporal. Esto es:\n",
+        "#Nombre  Peso[kg] Altura[m]  IMC\n",
+        "#\"Sofía\"    57      1.65     (agrege aquí el resultado del cálculo)\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "UZ_ueaXJdJsT"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Genere una quinta columna en la matriz calculo_IMC que emita una descripción obtenida del IMC. Esto es:\n",
+        "#Nombre  Peso[kg] Altura[m]  IMC        Descripción\n",
+        "#\"Sofía\"    57      1.65     (calculo)  (Dependiendo del IMC debe registrar peso normal, sobrepeso, obesidad tipo I, obesidad tipo II... etc.\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "cgQqg0YJffSH"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Conocer el tamaño del vector\n",
+        "len(ejemplo)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KZ5QnAzbaH_v",
+        "outputId": "e6d57ab7-700e-4ffc-f755-3ef715b4922e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "4"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 28
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Llenar una lista vacía\n",
+        "ejemplo.append(\"Hola\")"
+      ],
+      "metadata": {
+        "id": "JsgmYIkuSVFj"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Una lista puede tener diferente tipo de datos!!\n",
+        "ejemplo=[\"banana\",\"sandía\", 4, 5, False]\n",
+        "ejemplo\n",
+        "#Qué pasó con el elemento \"Hola\"?"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "q6LTGURtY_RM",
+        "outputId": "64ffaf64-5463-40a2-9bd9-aa4187bdce37"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['banana', 'sandía', 4, 5, False]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Eliminar un elemento de la lista\n",
+        "ejemplo.remove(4)\n",
+        "ejemplo"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "p_o0X4fKZw0k",
+        "outputId": "f4b7be60-6135-4db5-dde6-055d5446db2d"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['banana', 'sandía', 5, False]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 15
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Podría explicar el error generado?\n",
+        "ejemplo.remove(4)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 183
+        },
+        "id": "ODz7MJvbbh8e",
+        "outputId": "7adab8e4-0be8-41a0-8a75-d9b20c827f78"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "ValueError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mValueError\u001b[0m                                Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-16-cc5e3be70b57>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;31m#Podría explicar el error generado?\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mejemplo\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mremove\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m4\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mValueError\u001b[0m: list.remove(x): x not in list"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Podría explicar el resultado de este método? \n",
+        "del ejemplo[2]\n",
+        "ejemplo"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lhRUkQOEcWHu",
+        "outputId": "ab27ed5a-da7a-4b33-f6b9-81747b4a8e96"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['banana', 'sandía', False]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 17
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### EJERCICIO PARA ELIMINAR UN QUEST OBLIGATORIO ☝\n",
+        "\n",
+        "![Texto alternativo](https://cdn.memegenerator.es/imagenes/memes/full/28/50/28507442.jpg)\n",
+        "\n",
+        "Realiza el ejercicio propuesto de forma correcta antes de que acabe el tiempo, y hazte acreedor@ de eliminar un quest obligatorio ✨"
+      ],
+      "metadata": {
+        "id": "hmS_3bTvgCph"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Revise la página https://www.researchgate.net/publication/273298847_Piedra_Papel_Tijera_y_sus_generalizaciones\n",
+        "#Programe Piedra, papel, tijera, spock, lagarto, Papa y heavy usando arreglos."
+      ],
+      "metadata": {
+        "id": "p0SGwGpNgBaz"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "while True:\n",
+        "    aleatorio = (0, 5)\n",
+        "    elijePc = \"\"\n",
+        "    print(\"1. Piedra\")\n",
+        "    print(\"2. Papel\")\n",
+        "    print(\"3. Tijera\")\n",
+        "    print(\"4. Spock\")\n",
+        "    print(\"5. Lagarto\")\n",
+        "    opción = int(input(\"Elige tu opción\"))\n",
+        "\n",
+        "    if opción == 1:\n",
+        "        elijeusuario = \"Piedra\"\n",
+        "    elif opción == 2:\n",
+        "        elijeusuario = \"Papel\"\n",
+        "    elif opción == 3:\n",
+        "        elijeusuario = \"Tijera\"\n",
+        "    elif opción == 4:\n",
+        "        elijeusuario = \"Spock\"\n",
+        "    elif opción == 5:\n",
+        "        elijeusuario = \"Lagarto\"\n",
+        "    print(\"Elejiste: \", elijeusuario)\n",
+        "\n",
+        "    if aleatorio == 0:\n",
+        "        elijePc = \"Piedra\"\n",
+        "    elif aleatorio == 1:\n",
+        "        elijePc = \"Papel\"\n",
+        "    elif aleatorio == 2:\n",
+        "        elijePc = \"Tijera\"\n",
+        "    elif aleatorio == 3:\n",
+        "        elijePc = \"Spock\"\n",
+        "    elif aleatorio == 4:\n",
+        "        elijePc = \"Lagarto\"\n",
+        "    print(\"La máquina elijio: \", elijePc)\n",
+        "    print(\"...\")\n",
+        "    if elijeusuario == \"Piedra\" and elijePc == \"Tijera\" or elijePc == \"Lagarto\":\n",
+        "        print(\"Ganaste, la piedra aplasta al algarto y aplasta a la piedra \")\n",
+        "    if elijeusuario == \"Tijera\" and elijePc == \"papel\" or elijePc == \"Lagarto\":\n",
+        "        print(\"Ganaste, la tijera decapita al algarto y y corta al papel \")\n",
+        "    if elijeusuario == \"papel\" and elijePc == \"piedra\" or elijePc == \"spock\":\n",
+        "        print(\"Ganaste, el papel envuelve a la piedra y desautoriza spock \")\n",
+        "    if elijeusuario == \"spock\" and elijePc == \"Tijera\" or elijePc == \"piedra\":\n",
+        "        print(\"Ganaste, el spock rompe la tijera y vaporiza la piedra \")\n",
+        "    if elijeusuario == \"lagarto\" and elijePc == \"spock\" or elijePc == \"papel\":\n",
+        "        print(\"Ganaste, el largato envenena al spock y devora el papel \")\n",
+        "    if elijeusuario == elijePc:\n",
+        "        print(\"empate\")\n",
+        "\n",
+        "    play_again = input(\"quieres jugar de nuevo ? (s/n): \")\n",
+        "    if play_again.lower() != \"s\":\n",
+        "        break \n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kjHKys4Uk_lr",
+        "outputId": "14697488-d4e2-4270-aa70-aae4fae77cd4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1. Piedra\n",
+            "2. Papel\n",
+            "3. Tijera\n",
+            "4. Spock\n",
+            "5. Lagarto\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
